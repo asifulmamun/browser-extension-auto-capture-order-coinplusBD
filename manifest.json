@@ -1,0 +1,24 @@
+{
+  "name": "Auto Submit Button for coinplus",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.coinplus.store/*"
+      ],
+      "js": [
+        "app.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "scripting",
+    "tabs",
+    "notifications"
+  ]
+}
